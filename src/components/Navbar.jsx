@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { logo } from "../images";
 
 function Navbar() {
   const [toggled, setToggled] = useState(false);
@@ -12,10 +13,8 @@ function Navbar() {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={toggled ? "true" : "false"}
           aria-label="Toggle navigation"
           onClick={() => setToggled(!toggled)}
         >
@@ -28,29 +27,25 @@ function Navbar() {
         >
           <div className="d-flex align-items-center justify-content-center ">
             <Link to="/" id="logo" className="text-decoration-none">
+              <img src={logo} width={100} />
               <span className="m-0">Notify Me Now</span>
             </Link>
           </div>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/dashboard">
+              <Link className="nav-link" to="/dashboard">
                 Dashboard
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#pricing">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="">
+              <Link className="nav-link" to="/register">
                 Get us
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="d-flex">

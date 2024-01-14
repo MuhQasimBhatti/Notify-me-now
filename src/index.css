@@ -29,6 +29,16 @@ code {
   font-family: cursive;
 }
 
+.toggler {
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  font-size: 22px;
+  color: #333;
+}
+
+.landingPage {
+  background-image: linear-gradient(to bottom right, #EAE0FF, #D1F9FC);
+}
 
 .signinPage {
   background-image: linear-gradient(to bottom right, #EAE0FF, #D1F9FC);
@@ -36,14 +46,6 @@ code {
   margin: 0%;
   padding: 10% 20%;
 }
-
-/* .signinPageInner {
-  background-image: url(./images/signin.png);
-  height: 100vh;
-  padding: 10% 20%;
-  background-size: contain;
-  opacity: 0.8;
-} */
 
 .signupPage {
   background-image: url(./images/development.svg);
@@ -57,14 +59,14 @@ code {
 
 
 /* Dashboard */
-.dashboard{
+.dashboard {
   background-image: linear-gradient(to bottom left, #9b5fee, #638dc5);
   height: 100vh;
   margin: 0%;
-  display:flex;
+  display: flex;
 }
 
-.toggleButton{
+.toggleButton {
   display: flex;
   width: 100%;
   align-items: center;
@@ -72,8 +74,7 @@ code {
   padding: 10px 0;
 }
 
-.sidebar
-{
+.sidebar {
   height: 100vh;
   overflow: hidden;
   color: #212529;
@@ -81,28 +82,29 @@ code {
   background-color: white;
 }
 
-.dashboardLogo{
+.dashboardLogo {
   font-size: xx-large;
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid;
   padding: 15px;
 }
 
-.sidebarList{
+.sidebarList {
   list-style: none;
   margin-top: 20px;
   padding: 0;
 }
 
-.sidebarLi{
+.sidebarLi {
   width: 100%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
-.sidebarLi:hover{
+
+.sidebarLi:hover {
   background-color: #0D6EFD;
   color: white;
 }
 
-.sidebarLink{
+.sidebarLink {
   text-decoration: none;
   color: #212529;
 }
