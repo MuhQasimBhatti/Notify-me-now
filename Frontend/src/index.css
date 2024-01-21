@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#navbarNav {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#logo {
+  color: #0D6EFD;
+  text-decoration: none;
+  font-size: x-large;
+  font-family: cursive;
+}
+
+.toggler {
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  font-size: 22px;
+  color: #333;
+}
+
+.landingPage {
+  background-image: linear-gradient(to bottom right, #EAE0FF, #D1F9FC);
+}
+
+.signinPage {
+  background-image: linear-gradient(to bottom right, #EAE0FF, #D1F9FC);
+  height: 100vh;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
+}
+
+.signupPage {
+  background-image: url(./images/development.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
+}
+
+
+
+/* Dashboard */
+.dashboard {
+  background-image: linear-gradient(to bottom left, #b366ff, #638dc5);
+}
+
+.toggleButton {
+  padding: 10px 0;
+}
+
+.sidebar {
+  min-height: 100vh;
+  width: 250px;
+  color: #212529;
+  padding: 100px 10px;
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+.dashboardLogo {
+  font-size: xx-large;
+  border-bottom: 1px solid;
+  padding: 15px;
+}
+
+.sidebarList {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.sidebarLi {
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebarLi:hover {
+  background-color: #0D6EFD;
+  color: white;
+}
+
+.sidebarLink {
+  text-decoration: none;
+  color: #212529;
+}
+
+.sidebarDropdown {
+  background-color: #0D6EFD;
+  color:white;
+  list-style: none;
+}
+/* Sms and email form */
+.smsNemailForm {
+  width: 350px;
+  background-image: linear-gradient(to bottom left, #dfdfdf44, #cdcdcd92);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+  background-color: white;
+}
+
+.messageBox {
+  border: 1px solid #07070765;
+  border-radius: 0.3rem;
+  padding: 2px 5px;
+}
+
+@media only screen and (max-width:576px) {
+  body{
+    font-size: 14px;
+  }
+  .smsNemailForm {
+    width: 300px;
+    margin-top: 25%;
+  }
+
+  .formsDiv {
+    margin-top: 15%;
+  }
+  
+  .signupPage{
+    padding: 12% 10%;
+    min-width: screen;
+  }
+}
+
+
+@media only screen and (max-width:1023px) {
+  .formsDiv {
+    margin-top: 25%;
+  }
+  .sidebar{
+   padding: 75px 40px;
+  }
+  .smsNemailForm {
+    margin-top: 30%;
+  }
+}
+
+@media (max-width:2048px) {
+  body{
+    font-size: 24px;
+  }
+
+  .formsDiv {
+    margin-top: 10%;
+  }
+}
+
