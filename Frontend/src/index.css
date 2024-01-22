@@ -1,17 +1,18 @@
-body {
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
+
 
 #navbarNav {
   background-color: transparent;
@@ -28,6 +29,40 @@ code {
   text-decoration: none;
   font-size: x-large;
   font-family: cursive;
+}
+
+.custom-button {
+  background-color: #fd7f27;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Optional: Add hover effect */
+.custom-button:hover {
+  color: #fd7f27;
+  background-color: white;
+  border: 1px solid #FD7F27;
+}
+
+.signupbtn {
+  color: #fd7f27;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.signupbtn:hover {
+  background-color: #fd7f27;
+  color: white;
+  border: #FD7F27;
 }
 
 .toggler {
@@ -67,7 +102,8 @@ code {
 
 /* Dashboard */
 .dashboard {
-  background-image: linear-gradient(to bottom left, #b366ff, #638dc5);
+  background-image: linear-gradient(to bottom left, #2D3250, #7077A1);
+  /* background-image: url(./images/dashboardBg.jpg); */
 }
 
 .toggleButton {
@@ -75,11 +111,11 @@ code {
 }
 
 .sidebar {
-  min-height: 100vh;
+  height: 70%;
   width: 250px;
-  color: #212529;
-  padding: 100px 10px;
-  background-color: white;
+  color: #2D3251;
+  padding: 10px 10px;
+  background-color: #fd8027e5;
   scroll-behavior: smooth;
 }
 
@@ -87,6 +123,8 @@ code {
   font-size: xx-large;
   border-bottom: 1px solid;
   padding: 15px;
+  color: white;
+  font-weight: 500;
 }
 
 .sidebarList {
@@ -98,10 +136,11 @@ code {
 .sidebarLi {
   width: 100%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .sidebarLi:hover {
-  background-color: #0D6EFD;
+  background-color: #7077A1;
   color: white;
 }
 
@@ -111,10 +150,16 @@ code {
 }
 
 .sidebarDropdown {
-  background-color: #0D6EFD;
-  color:white;
+  background-color: #7077A1;
+  color: white;
   list-style: none;
 }
+
+.activetab {
+  background-color: #7077A1;
+  color: white;
+}
+
 /* Sms and email form */
 .smsNemailForm {
   width: 350px;
@@ -129,9 +174,31 @@ code {
   padding: 2px 5px;
 }
 
-@media only screen and (max-width:576px) {
-  body{
-    font-size: 14px;
+.footerli {
+  text-decoration:none;
+  color:#212529;
+}
+
+.footerli:hover {
+  color: #fd7f27;
+  border-bottom: 1px solid #fd7f27;
+}
+
+.heroHeading {
+  font-size: 60px;
+  color:#FD7F27;
+}
+
+@media (max-width:576px) {
+  body {
+    font-size: 12px;
+  }
+.heroHeading {
+  font-size: x-large;
+  color:#FD7F27;
+}
+  .heroImage{
+    width:100%;
   }
   .smsNemailForm {
     width: 300px;
@@ -141,8 +208,8 @@ code {
   .formsDiv {
     margin-top: 15%;
   }
-  
-  .signupPage{
+
+  .signupPage {
     padding: 12% 10%;
     min-width: screen;
   }
@@ -153,21 +220,320 @@ code {
   .formsDiv {
     margin-top: 25%;
   }
-  .sidebar{
-   padding: 75px 40px;
+
+  .sidebar {
+    padding: 75px 40px;
+    width: 20rem;
+    margin-top: 10%;
   }
+
   .smsNemailForm {
-    margin-top: 30%;
+    margin-top: 20%;
   }
 }
 
 @media (max-width:2048px) {
-  body{
-    font-size: 24px;
+  body {
+    font-size: 20px;
   }
 
   .formsDiv {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 
+
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #095a55;
+
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #ffe18e;
+}
+
+.container {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+  /* border-radius: 22px; */
+  /* background-color: #fff; */
+
+}
+
+.container .contactInfo {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: #095a55;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 22px;
+}
+
+.container .contactInfo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.container .contactInfo ul.info {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.container .contactInfo ul.info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+
+/* for gmail */
+.container .contactInfo ul.info li span a {
+  color: #fff;
+  text-decoration: none;
+  width: 30px;
+  min-width: 30px;
+
+}
+
+.container .contactInfo ul.info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert(1);
+}
+
+.container .contactInfo ul.info li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.container .contactInfo ul.sci {
+  position: relative;
+  display: flex;
+}
+
+.container .contactInfo ul.sci li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.container .contactInfo ul.sci li a {
+  text-decoration: none;
+}
+
+.container .contactInfo ul.sci li a img {
+  filter: invert(1);
+}
+
+.container .contactForm {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+}
+
+.container .contactForm h2 {
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.container .contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.container .contactForm .formBox .inputBox {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.container .contactForm .formBox .inputBox.w50 {
+  width: 47%;
+}
+
+.container .contactForm .formBox .inputBox.w100 {
+  width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea {
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox textarea {
+  height: 120px;
+}
+
+.container .contactForm .formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.container .contactForm .formBox .inputBox input:focus~span,
+.container .contactForm .formBox .inputBox input:valid~span,
+.container .contactForm .formBox .inputBox textarea:focus~span,
+.container .contactForm .formBox .inputBox textarea:valid~span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #095a55;
+  font-weight: 500;
+}
+
+/* Css for the submit button */
+.container .contactForm .formBox .inputBox input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #095a55;
+  border-radius: 20px;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"]:hover {
+  background: #0d9480;
+}
+
+/* make the form responsive */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .container .contactInfo {
+    top: 0;
+    height: 550px;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+
+  .container .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff38e;
+  }
+
+  section::before {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .container .contactForm {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+
+  .container .contactInfo {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    border-radius: 0px;
+  }
+
+  .container .contactInfo ul.sci {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .contactForm {
+    padding: 25px;
+  }
+
+  .container .contactInfo {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container .contactInfo ul.sci {
+    margin-top: 40px;
+  }
+
+  .container .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+}

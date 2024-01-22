@@ -53,7 +53,7 @@ const Register = () => {
               }}
             >
               <MDBCardBody className="p-5 shadow-5 text-center">
-                <h2 className="fw-bold mb-5">Sign up now</h2>
+                <h2 className="fw-bold mb-5" style={{color:"#fd7f27"}}>Sign up now</h2>
 
                 <MDBRow>
                   <MDBCol col="6">
@@ -105,9 +105,9 @@ const Register = () => {
                   />
                 </div>
 
-                <MDBBtn className="w-100 mb-4" size="md">
+                <button className="custom-button w-100 mb-4" size="md">
                   sign up
-                </MDBBtn>
+                </button>
 
                 <div className="text-center">
                   <p>or sign up with:</p>
@@ -116,7 +116,7 @@ const Register = () => {
                     tag="a"
                     color="none"
                     className="mx-3"
-                    style={{ color: "#1266f1" }}
+                    style={{ color: "#fd7f27" }}
                   >
                     <MDBIcon fab icon="facebook-f" size="sm" />
                   </MDBBtn>
@@ -125,7 +125,7 @@ const Register = () => {
                     tag="a"
                     color="none"
                     className="mx-3"
-                    style={{ color: "#1266f1" }}
+                    style={{ color: "#fd7f27" }}
                   >
                     <MDBIcon fab icon="twitter" size="sm" />
                   </MDBBtn>
@@ -134,7 +134,7 @@ const Register = () => {
                     tag="a"
                     color="none"
                     className="mx-3"
-                    style={{ color: "#1266f1" }}
+                    style={{ color: "#fd7f27" }}
                   >
                     <MDBIcon fab icon="google" size="sm" />
                   </MDBBtn>
@@ -143,7 +143,7 @@ const Register = () => {
                     tag="a"
                     color="none"
                     className="mx-3"
-                    style={{ color: "#0B5ED7" }}
+                    style={{ color: "#fd7f27" }}
                   >
                     <MDBIcon fab icon="github" size="sm" />
                   </MDBBtn>

@@ -76,9 +76,9 @@ const Login = () => {
                 <a href="/resetpassword" className="d-flex justify-content-end  align-items-end ">Forgot password?</a>
               </div>
 
-              <MDBBtn className="mb-4 w-100" size="lg">
+              <button className="custom-button mb-4 w-100" size="lg">
                 Sign in
-              </MDBBtn>
+              </button>
               
             </MDBCol>
           </MDBRow>

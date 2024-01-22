@@ -88,49 +88,50 @@ const teams = [
   },
 ];
 
-const Sidebar = () => {
-  const [selectedTeam, setSelectedTeam] = useState(null);
 
-  
+const Sidebar = ({ selectedGroup }) => {
+  const [selectedTeam, setSelectedTeam] = useState(null);
+  const [dropdownTeam, setDropdownTeam] = useState(null);
+
   const handleTeamClick = (team) => {
-    setSelectedTeam((prevTeam) => (prevTeam === team ? null : team));
+    setDropdownTeam((prevTeam) => (prevTeam === team ? null : team));
+    setSelectedTeam(team);
+    selectedGroup(team.name);
   };
 
   return (
-    <div className="sidebar position-absolute" style={{ zIndex: "20" }}>
-      <div className="dashboardLogo">Dashboard</div>
-      <div>
-        <ul className="list-group sidebarList">
-          {teams.map((team) => (
-            <Link
-              to=""
-              className="sidebarLink m-1"
-              onClick={() => handleTeamClick(team)}
-            >
-              <li
-                key={team.id}
-                className={`list-group-item sidebarLi py-2 text-center rounded-3 ${
-                  selectedTeam === team ? "active font-weight-bold" : ""
-                }`}
-              >
-                {team.name}
+    <div className="position-absolute d-flex align-items-center justify-justify-content-center p-3" style={{ height: "100vh" }}>
+      <div className="sidebar rounded-5" style={{ zIndex: "999" }}>
+        <div className="dashboardLogo text-center">TEAMS</div>
+        <div>
+          <ul className="list-group sidebarList">
+            {teams.map((team) => (
+              <Link to="" className="sidebarLink m-1" onClick={() => handleTeamClick(team)}>
+                <li
+                  key={team.id}
+                  className={`sidebarLi py-2 text-center rounded-3 ${selectedTeam === team ? "activetab" : "sidebarLi"} ${dropdownTeam===team?"fw-bold":"fw-normal"}`}
+                >
+                  {team.name}
 
-                {selectedTeam === team && (
-                  <ul className="list-group my-1 ">
-                    {team.contacts.map((contact) => (
-                      <li key={contact.id} className="sidebarDropdown font-weight-normal ">
-                        {contact.name}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            </Link>
-          ))}
-        </ul>
+                  {dropdownTeam === team && (
+                    <ul className="list-group py-1">
+                      {team.contacts.map((contact) => (
+                        <li key={contact.id} className="sidebarDropdown font-weight-normal">
+                          {contact.name}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
+
+
 
 export default Sidebar;

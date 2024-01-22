@@ -38,7 +38,7 @@ const SmsForm = () => {
       <button
         onClick={handleSendSMS}
         type="button"
-        className="mt-3 btn btn-primary rounded-5 "
+        className="mt-3 custom-button rounded-5 "
         data-mdb-ripple-init
       >
         Send Message

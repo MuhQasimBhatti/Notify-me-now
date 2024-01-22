@@ -1,0 +1,14 @@
+
+/vscode
+/build
+# .gitignore
+
+# Ignore node_modules in the parent folder
+/node_modules/
+
+# Ignore node_modules in the frontend folder
+/frontend/node_modules/
+
+# Ignore node_modules in the backend folder
+/backend/node_modules/
+node_modules

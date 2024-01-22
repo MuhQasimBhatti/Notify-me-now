@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Sidebar from "./Sidebar";
 
-const EmailForm = () => {
-  const [emailTo, setEmailTo] = useState("");
+const EmailForm = ({emailTo}) => {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
 
@@ -22,6 +20,9 @@ const EmailForm = () => {
     } catch (error) {
       console.error(error.response ? error.response.data : "Unknown error");
     }
+    setSubject("");
+    setText("");
+
   };
 
   return (
@@ -33,7 +34,7 @@ const EmailForm = () => {
         <input
           type="email"
           value={emailTo}
-          onChange={(e) => setEmailTo(e.target.value)}
+          readOnly
           className="messageBox"
         />
 
@@ -56,7 +57,7 @@ const EmailForm = () => {
         <button
           onClick={handleSendEmail}
           type="button"
-          className="mt-3 btn btn-primary rounded-5 "
+          className="mt-3 custom-button rounded-5 "
           data-mdb-ripple-init
         >
           Send Email

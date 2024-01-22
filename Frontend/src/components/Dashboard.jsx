@@ -22,6 +22,13 @@ const Dashboard = () => {
     setSidebarVisible(!sidebarVisible);
   };
 
+  const [emailTo, setEmailTo] = useState(""); // State for the email "to" field
+
+  // Callback function to update the email "to" field
+  const handleSelectedGroup = (category) => {
+    setEmailTo(category);
+  };
+
   return (
     <div className="dashboard " style={{ overflow: "hidden", height: "100vh" }}>
       {/* Toggle button for sidebar */}
@@ -47,7 +54,7 @@ const Dashboard = () => {
         >
           {sidebarVisible && (
             <div className="position-absolute top-0 left-0">
-              <Sidebar />
+              <Sidebar selectedGroup={handleSelectedGroup} />
             </div>
           )}
           <div className="position-relative h-100 w-100 d-flex flex-column align-items-center justify-content-center">
@@ -65,8 +72,8 @@ const Dashboard = () => {
                   value="SMS"
                   aria-label="sms"
                   style={{
-                    backgroundColor: toggle === "SMS" ? "#2196f3" : "",
-                    color: toggle === "SMS" ? "white" : "", // Text color
+                    backgroundColor: toggle === "SMS" ? "#fd7f27" : "",
+                    color: toggle === "SMS" ? "white" : "white", // Text color
                   }}
                 >
                   <MessageOutlinedIcon fontSize="medium" />
@@ -75,8 +82,8 @@ const Dashboard = () => {
                   value="Email"
                   aria-label="email"
                   style={{
-                    backgroundColor: toggle === "Email" ? "#2196f3" : "",
-                    color: toggle === "Email" ? "white" : "",
+                    backgroundColor: toggle === "Email" ? "#fd7f27" : "",
+                    color: toggle === "Email" ? "white" : "white",
                   }}
                 >
                   <EmailOutlinedIcon fontSize="medium" />
@@ -98,7 +105,7 @@ const Dashboard = () => {
             )}
             {toggle === "Email" && (
               <div >
-                <Email />
+                <Email emailTo={emailTo}/>
               </div>
             )}
             </div>
