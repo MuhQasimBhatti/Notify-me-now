@@ -11,7 +11,7 @@ import { FaBars } from "react-icons/fa";
 function OffcanvasExample() {
     const expand="lg";
     return (
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex align-items-center justify-content-center mb-5 mb-md-0  ">
     <Navbar expand={expand} className=" position-absolute sticky-top rounded-5 m-3 px-2 px-md-5 " style={{width:"95%", backgroundColor:"#292d36"}}>
       <Container fluid >
         <Navbar.Brand href="/">

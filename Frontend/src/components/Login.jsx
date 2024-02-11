@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import { login } from "../images";
 
 const Login = () => {
   const [email,setEmail]=useState("");
@@ -41,14 +42,16 @@ const Login = () => {
           <MDBRow>
             <MDBCol col="10" md="6">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                src={login}
                 class="img-fluid"
                 alt="Phone image"
               />
             </MDBCol>
 
             <MDBCol col="4" md="6">
-              
+              <MDBTypography style={{color:"#fd7f27",fontWeight:"bold",fontSize:"50px",textAlign:"center"}}>
+                WELCOME BACK!
+              </MDBTypography>
               <MDBInput
                 wrapperClass="mb-4"
                 label="Email address"

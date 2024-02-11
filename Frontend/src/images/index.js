@@ -1,6 +1,6 @@
 export {default as register} from "./register.png"
 export {default as development} from "./development.svg"
-export {default as signin} from "./signin.png"
+export {default as login} from "./login.png"
 
 export {default as hero3} from "./hero3.png"
 export {default as landingPage1} from "./landingPage1.png"

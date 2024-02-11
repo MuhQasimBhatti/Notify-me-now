@@ -53,7 +53,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "notify_me_now",
+  database: "notifymenow",
 });
 
 // Connect to the MySQL database
